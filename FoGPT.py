@@ -1,3 +1,5 @@
+# meta developer: @Foxy437
+
 import os
 import sys
 import json
