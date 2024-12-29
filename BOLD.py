@@ -14,12 +14,12 @@ class BoldMod(loader.Module):
         self.db = db
         self.db.set(self.strings["name"], "bold_enabled", False)
 
-    async def on_boldcmd(self, message):
+    async def on_bcmd(self, message):
         """Включить авто замену шрифта на жирный."""
         self.db.set(self.strings["name"], "bold_enabled", True)
         await utils.answer(message, "СЭР ДА СЭР!")
 
-    async def off_boldcmd(self, message):
+    async def off_bcmd(self, message):
         """Выключить авто замену шрифта на жирный."""
         self.db.set(self.strings["name"], "bold_enabled", False)
         await utils.answer(message, "СЭР ДА СЭР!")
