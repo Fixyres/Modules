@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 # meta developer: @Foxy437
 # Попросил сделать: @qequqo
+# meta banner: https://raw.githubusercontent.com/Fixyres/FHeta/refs/heads/main/IMG_20241127_111104_471.jpg
 
 from .. import loader, utils
 
 @loader.tds
-class BolMod(loader.Module):
+class BoldMod(loader.Module):
     """Модуль для авто замены шрифтика на жирный."""
-    strings = {"name": "Bol"}
+    strings = {"name": "Bold"}
     
     async def client_ready(self, client, db):
         self.client = client
