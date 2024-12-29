@@ -7,10 +7,10 @@
 from .. import loader, utils
 
 @loader.tds
-class AsciiArtsMod(loader.Module):
+class AsciiArtMod(loader.Module):
     """Создает ASCII арт баннеры"""
 
-    strings = {"name": "AsciiArts"}
+    strings = {"name": "AsciiArt"}
 
     def __init__(self):
         self.prefix = "#             "  # Фиксированный отступ
