@@ -5,9 +5,9 @@
 from .. import loader, utils
 
 @loader.tds
-class BoldMod(loader.Module):
+class BolMod(loader.Module):
     """Модуль для авто замены шрифтика на жирный."""
-    strings = {"name": "Bold"}
+    strings = {"name": "Bol"}
     
     async def client_ready(self, client, db):
         self.client = client
