@@ -50,7 +50,7 @@ class AnimatedQuotesMod(loader.Module):
 
 
     @loader.command()   
-    async def cfganiq(self, message):
+    async def cfgani(self, message):
              """> Set up buttons for the module"""
              name = self.strings("name")
              await self.allmodules.commands["config"](
