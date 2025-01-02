@@ -101,11 +101,11 @@ logger = logging.getLogger(__name__)
 
 
 @loader.tds
-class AcTimMod(loader.Module):
+class AcTimeMod(loader.Module):
     """Module for get account time"""
 
     strings = {
-        "name": "Account Tim",
+        "name": "Account Time",
         "info": "Get the account registration date and time!",
         "error": "Error!",
     }
