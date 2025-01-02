@@ -89,7 +89,7 @@ def convert_timespan(timespan: str) -> timedelta:
     return result
 
 
-def humanize_timespan(timespan: timedelta, language: str = 'en_US') -> str:
+def humanize_timesan(timespan: timedelta, language: str = 'en_US') -> str:
     """
     Humanize a timespan object.
     :param timespan: The timespan object.
