@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # meta developer: @Foxy437
 # Попросил сделать: @qequqo
 
@@ -6,7 +5,7 @@ from .. import loader, utils
 
 @loader.tds
 class BoldMod(loader.Module):
-    """Модуль для авто замены шрифтика на жирный."""
+    """Модуль для авто замены шрифта на жирный."""
     strings = {"name": "Bold"}
     
     async def client_ready(self, client, db):
@@ -15,12 +14,12 @@ class BoldMod(loader.Module):
         self.db.set(self.strings["name"], "bold_enabled", False)
 
     async def on_boldcmd(self, message):
-        """Включить авто замену шрифтика на жирный."""
+        """Включить авто замену шрифта на жирный."""
         self.db.set(self.strings["name"], "bold_enabled", True)
         await utils.answer(message, "СЭР ДА СЭР!")
 
     async def off_boldcmd(self, message):
-        """Выключить авто замену шрифтика на жирный."""
+        """Выключить авто замену шрифта на жирный."""
         self.db.set(self.strings["name"], "bold_enabled", False)
         await utils.answer(message, "СЭР ДА СЭР!")
 
