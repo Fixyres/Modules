@@ -1,3 +1,4 @@
+# meta banner: https://raw.githubusercontent.com/Fixyres/Modules/refs/heads/main/IMG_20250112_185329_901.jpg
 # meta developer: @Foxy437 & venom
 
 from .. import loader, utils
