@@ -9,8 +9,6 @@ class BoldMod(loader.Module):
     strings = {"name": "Bold"}
     
     async def client_ready(self, client, db):
-        self.client = client
-        self.db = db
         self.db.set(self.strings["name"], "bold_enabled", False)
 
     async def on_boldcmd(self, message):
