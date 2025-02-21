@@ -32,7 +32,7 @@ import re
 
 @loader.tds
 class FHeta(loader.Module):
-    '''Module for searching modules!! Watch all updates in fheta in @FHeta_updates!'''
+    '''Module for searching modules! Watch all updates in fheta in @FHeta_updates!'''
     
     strings = {
         "name": "FHeta",
