@@ -1,4 +1,3 @@
-
 # meta developer: @xensidemod
 # requires: penis
 
@@ -7,6 +6,6 @@ import penis
 
 @loader.tds
 class PenisMod(loader.Module):
-    """Just Penis"""
+    """Penis"""
 
     strings = {"name": "Penis"}
