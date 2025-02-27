@@ -11,7 +11,7 @@ __version__ = (2, 0, 0)
 # meta developer: @hikarimods
 # scope: hikka_only
 # scope: hikka_min 1.2.10
-
+#none
 
 import asyncio
 import atexit
