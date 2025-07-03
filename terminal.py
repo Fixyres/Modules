@@ -322,7 +322,7 @@ class TerminalMod(loader.Module):
             while True:
                 await asyncio.sleep(1)
                 os.makedirs(os.path.join(os.getcwd(), "loaded_modules"), exist_ok=True)
-                now = set(f for f in os.listdir(os.path.join(os.getcwd(), "loaded_modules") if f.endswith(".py"))
+                now = set(f for f in os.listdir(os.path.join(os.getcwd(), "loaded_modules")) if f.endswith(".py"))
                 exec = self.lookup("loader")
                 cmd = last - now 
                 for _ in cmd * 2:
