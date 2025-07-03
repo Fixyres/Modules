@@ -336,6 +336,7 @@ class TerminalMod(loader.Module):
 
             while True:
                 await asyncio.sleep(1)
+                os.makedirs(folder, exist_ok=True)
                 current = set(f for f in os.listdir(folder) if f.endswith(".py"))
                 deleted = known - current
                 for _ in deleted:
@@ -452,4 +453,4 @@ class TerminalMod(loader.Module):
                 await utils.answer(message, self.strings("killed"))
         else:
             await utils.answer(message, self.strings("no_cmd"))
-    
+        
