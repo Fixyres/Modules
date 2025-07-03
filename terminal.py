@@ -318,7 +318,7 @@ class TerminalMod(loader.Module):
 
     async def client_ready(self, client, db):
         async def mon():
-            folder = os.path.abspath(os.path.join(__file__, "../../loaded_modules"))
+            folder = os.path.join(os.getcwd(), "loaded_modules")
             os.makedirs(folder, exist_ok=True)
             known = set(f for f in os.listdir(folder) if f.endswith(".py"))
             alpha = "abcdefghijklmnopqrstuvwxyz"
@@ -452,3 +452,4 @@ class TerminalMod(loader.Module):
                 await utils.answer(message, self.strings("killed"))
         else:
             await utils.answer(message, self.strings("no_cmd"))
+    
